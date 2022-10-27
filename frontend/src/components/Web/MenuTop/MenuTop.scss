@@ -21,6 +21,12 @@
         }
     }
 
+    &__item {
+        li {
+            cursor: pointer;
+        }
+    }
+
     &__logo {
         padding: 10px;
 

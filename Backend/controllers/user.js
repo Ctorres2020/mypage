@@ -3,7 +3,6 @@ const path = require('path');
 const bcrypt = require("bcrypt-nodejs");
 const jwt = require('../services/jwt');
 const User = require("../models/user");
-const { exists } = require('../models/user');
 
 function signUp(req, res){
     const user = new User();

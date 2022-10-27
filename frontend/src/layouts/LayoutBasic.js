@@ -3,6 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 import {Layout, Row, Col} from 'antd';
 import './LayoutBasic.scss';
 import MenuTop from '../components/Web/MenuTop';
+import Footer from '../components/Web/Footer';
 
 
 
@@ -10,18 +11,19 @@ import MenuTop from '../components/Web/MenuTop';
 
 export default function LayoutBasic({routes}) {
 
-  const {Footer } = Layout;
 
   return(
-    <Row>
-      <Col md={4} />
-      <Col md={16}>
-        <MenuTop />
-        <LoadRoutes routes={routes} />
-        <Footer>Cesar Torres</Footer>
-      </Col>
-      <Col md={4} />
-    </Row>
+    <>
+      <Row>
+        <Col md={4} />
+        <Col md={16}>
+          <MenuTop />
+        </Col>
+        <Col md={4} />
+      </Row>
+      <LoadRoutes routes={routes} />
+      <Footer />
+    </>
   )
 }
 

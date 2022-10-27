@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import HomeCourses from '../components/Web/HomeCourses/HomeCourses';
+import HowMyCoursesWork from '../components/Web/HowMyCoursesWork/HowMyCoursesWork';
+import MainBanner from '../components/Web/MainBanner';
+import ReviewsCourses from '../components/Web/ReviewsCourses/ReviewsCourses';
 
 export default function Home() {
   return (
-    <div>
-        <h1>Home</h1>
-    </div>
-  )
+    <>
+        <MainBanner />
+        <HomeCourses />
+        <HowMyCoursesWork />
+        <ReviewsCourses />
+    </>
+
+    )
 }

@@ -8,7 +8,8 @@ const {API_VERSION} = require('./config');
 const userRoutes = require('./routes/user');
 const authRoutes = require('./routes/auth');
 const MenuRoutes = require('./routes/menu');
-
+const NewsletterRoutes = require('./routes/newsletter');
+const CourseRoutes = require('./routes/course');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -30,7 +31,7 @@ app.use((req, res, next) => {
 app.use(`/api/${API_VERSION}`, authRoutes);
 app.use(`/api/${API_VERSION}`, userRoutes);
 app.use(`/api/${API_VERSION}`, MenuRoutes);
-
-
+app.use(`/api/${API_VERSION}`, NewsletterRoutes);
+app.use(`/api/${API_VERSION}`, CourseRoutes);
 
 module.exports = app;
